@@ -1,0 +1,31 @@
+{
+  "name": "typescript-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker-build": "docker build -t iqdmsyd/node-typescript-web-server:latest .",
+    "docker-push": "docker push iqdmsyd/node-typescript-web-server",
+    "build": "tsc",
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/restify": "^8.5.5",
+    "dotenv": "^16.0.3",
+    "mongodb": "^3.7.3",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "restify": "^8.6.1",
+    "typeorm": "^0.3.10"
+  }
+}
